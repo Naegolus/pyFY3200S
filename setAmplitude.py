@@ -7,16 +7,16 @@ import sys;
 ###############################################################################
 
 if (len(sys.argv) != 3):
-	print("usage: python3 setFrequency.py <channel> <frequency>")
+	print("usage: python3 setFrequency.py <channel> <amplitude>")
 	print("  channel:   0, 1")
-	print("  frequency: [Hz]")
+	print("  amplitude: [V]")
 	sys.exit(1)
 
 funcGen = fg.FY3200S()
 
 channel = int(sys.argv[1])
-frequency = int(sys.argv[2])
+amplitude = int(sys.argv[2])
 
-funcGen[channel].set_frequency(frequency)
+funcGen[channel].set_amplitude(amplitude)
 
 funcGen.close()
