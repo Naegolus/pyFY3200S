@@ -15,7 +15,7 @@ if (len(sys.argv) != 3):
 funcGen = fg.FY3200S()
 
 channel = int(sys.argv[1])
-amplitude = int(sys.argv[2])
+amplitude = float(sys.argv[2])
 
 funcGen[channel].set_amplitude(amplitude)
 
